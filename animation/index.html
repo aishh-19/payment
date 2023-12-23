@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nalli site</title>
+    <style>
+        body {
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+        }
+
+        .heading > h1 {
+            color: white;
+        }
+        h1{
+            font-size: 50px;
+        }
+
+        h1::first-letter {
+            color: rgb(255, 0, 0);
+        }
+
+        .pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Adjusted margin */
+        }
+
+        .pic > img {
+            height: 280px;
+            width: 450px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .na {
+            margin-right: 20px; /* Adjusted margin */
+        }
+
+        .btns {
+            height: 45px;
+            width: 90px;
+            background-color: yellow;
+            color: red;
+            font-weight: bolder;
+            padding: 5px;
+            margin: 0 5px; /* Added margin */
+            font-size: 15px;
+          
+        }
+
+        .hn:hover {
+            animation-name: move;
+            animation-duration: 1s; /* Changed to duration */
+            animation-timing-function: linear(0 0%, 0.92 26.37%, 1 100%);
+            animation-iteration-count: infinite;
+            transform: translateX(50px); /* Moved the translation here */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(200px);
+            }
+            50%{
+                transform: translateY(-330px);
+            }
+            75%{
+                transform: translateZ(40px);
+            }
+        }
+        @media screen and (max-width : 667px){
+            h1{
+            font-size: 30px;
+            }
+           .pic > img{
+                height: 200px;
+                width: 250px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>
+            Bhai mai krdu payment?
+        </h1>
+    </div>
+    <div class="pic">
+        <img src="./joey-removebg-preview.png" alt="joey">
+    </div>
+    <div class="btn">
+        <button class="na btns" onclick="move()">Chod bhai</button>
+        <button class="hn btns">Hn bhai</button>
+    </div>
+    <script>
+        const move = () =>{
+            alert("bhai mai de ra tha chl ab tu dede baad mai de dunga tuje")
+        }
+    </script>
+</body>
+</html>
